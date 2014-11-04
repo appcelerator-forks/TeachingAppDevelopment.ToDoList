@@ -1,6 +1,11 @@
 //Event handlers
 function doClickAdd(e){
-	Ti.API.info("doClickAdd clicked");
+	var additem_ref = Alloy.createController("additem").getView();
+	if(OS_IOS){
+		$.navwin.openWindow(additem_ref);		
+	}else{
+		additem_ref.open();
+	}
 }
 
 
