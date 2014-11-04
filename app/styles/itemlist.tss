@@ -1,6 +1,8 @@
 
 "ScrollView" : {
+	layout: "vertical",
 	scrollType: "vertical",
+	showVerticalScrollIndicator: true,
 	scrollingEnabled: true,
-	width: "90%"
+	width: "100%"
 }

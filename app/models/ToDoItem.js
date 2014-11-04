@@ -1,11 +1,11 @@
 exports.definition = {
 	config: {
 		columns: {
-		    "description": "text",
-		    "done": "boolean",
-		    "created": "datetime",
-		    "duedate": "datetime",
-		    "sortorder": "int"
+		    "description": "TEXT",
+		    "done": "INTEGER",
+		    "created": "TEXT",
+		    "duedate": "TEXT",
+		    "sortorder": "INTEGER"
 		},
 		adapter: {
 			type: "sql",
