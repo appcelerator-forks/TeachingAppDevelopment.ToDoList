@@ -1,3 +1,7 @@
+//Event handlers
+function doClickAdd(e){
+	Ti.API.info("doClickAdd clicked");
+}
 
 
 // create global reference to the navwin, for later use

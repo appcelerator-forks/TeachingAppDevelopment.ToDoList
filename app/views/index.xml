@@ -1,12 +1,16 @@
 <Alloy>
 	<NavigationWindow id="navwin" platform="ios">
-		<Window>
-			<Label>iOS</Label>
+		<Window title="My Todo List">
+			<RightNavButton>
+				<Button systemButton="ADD" onClick="doClickAdd" />
+			</RightNavButton>
 			<Require src="itemlist" />
 		</Window>
 	</NavigationWindow>
-	<Window id="index" platform="android">
-		<Label>Android</Label>
+	<Window id="index" title="My Todo List" platform="android"> <!-- the id is set to give android a reference to the root window -->
+		<Menu>
+			<MenuItem icon="Ti.Android.R.drawable.ic_menu_add" onClick="doClickAdd" showAsAction="Ti.Android.SHOW_AS_ACTION_ALWAYS" />
+		</Menu>
 		<Require src="itemlist" />
 	</Window>
 </Alloy>
