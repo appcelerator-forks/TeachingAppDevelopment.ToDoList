@@ -1,0 +1,10 @@
+<Alloy>
+	<NavigationWindow id="navwin" platform="ios">
+		<Window>
+			<Label>iOS</Label>
+		</Window>
+	</NavigationWindow>
+	<Window id="index" platform="android">
+		<Label>Android</Label>
+	</Window>
+</Alloy>
