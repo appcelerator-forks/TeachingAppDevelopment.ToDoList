@@ -2,9 +2,11 @@
 	<NavigationWindow id="navwin" platform="ios">
 		<Window>
 			<Label>iOS</Label>
+			<Require src="itemlist" />
 		</Window>
 	</NavigationWindow>
 	<Window id="index" platform="android">
 		<Label>Android</Label>
+		<Require src="itemlist" />
 	</Window>
 </Alloy>

@@ -1,0 +1,6 @@
+
+"ScrollView" : {
+	scrollType: "vertical",
+	scrollingEnabled: true,
+	width: "90%"
+}
