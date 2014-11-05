@@ -1,16 +1,16 @@
 <Alloy>
-	<Window onOpen="doInit">
+	<Window onOpen="doInit" onClose="doCleanUp">
 		<RightNavButton platform="ios">
-			<Button systemButton="SAVE" />
+			<Button systemButton="SAVE" onClick="doClickSave" />
 		</RightNavButton>
 		<Menu platform="android">
-			<MenuItem icon="Ti.Android.R.drawable.ic_menu_save" showAsAction="Ti.Android.SHOW_AS_ACTION_ALWAYS" />
+			<MenuItem onClick="doClickSave" icon="Ti.Android.R.drawable.ic_menu_save" showAsAction="Ti.Android.SHOW_AS_ACTION_ALWAYS" />
 		</Menu>
 		<View id="inputform">
 			<Label>What needs doing?</Label>
 			<TextField id="description" hintText="Describe the task here" />
 			<Label>When should it be done?</Label>
-			<Picker id="duedate" type="Ti.UI.PICKER_TYPE_DATE">
+			<Picker id="duedate" onChange="doChangeDuedate" type="Ti.UI.PICKER_TYPE_DATE">
         	</Picker>
 		</View>
 	</Window>

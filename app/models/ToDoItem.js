@@ -3,8 +3,8 @@ exports.definition = {
 		columns: {
 		    "description": "TEXT",
 		    "done": "INTEGER",
-		    "created": "TEXT",
-		    "duedate": "TEXT",
+		    "created": "INTEGER",
+		    "duedate": "INTEGER",
 		    "sortorder": "INTEGER"
 		},
 		adapter: {
