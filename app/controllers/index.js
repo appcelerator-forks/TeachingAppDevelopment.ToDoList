@@ -9,6 +9,45 @@ function doClickAdd(e){
 }
 
 
+function doClickEdit(e){
+	// create the cancel button
+	var cancelbutton = Ti.UI.createButton({
+		id: "btnCancel",
+		systemButton: "CANCEL"
+	});
+	
+	// add the event listener
+	cancelbutton.addEventListener("click", doClickDone);
+	var emptyView = Ti.UI.createView();
+		
+	emptyView.add(cancelbutton);
+	// add the cancel button to the window
+	$.rootwin.setLeftNavButton(emptyView);
+	// set the TableView to editing
+	var itemListView = $.reqItemList.getView('tvItemList');
+	itemListView.editing = true;
+}
+
+function doClickDone(e){
+	// create the cancel button
+	var editbutton = Ti.UI.createButton({
+		id: "btnEdit",
+		systemButton: "EDIT"
+	});
+	// add the event listener
+	editbutton.addEventListener("click", doClickEdit);
+	var emptyView = Ti.UI.createView();
+	emptyView.add(editbutton);
+		
+	// add the cancel button to the window
+	$.rootwin.setLeftNavButton(emptyView);
+
+	// set the TableView to not editing
+	var itemListView = $.reqItemList.getView('tvItemList');
+	itemListView.editing = false;
+}
+
+
 // create global reference to the navwin, for later use
 Alloy.Globals.navwin = $.navwin;
 

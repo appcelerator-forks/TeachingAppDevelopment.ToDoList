@@ -1,7 +1,7 @@
 <Alloy>
 	<Collection src="ToDoItem" />
-	<ScrollView>
-		<TableView dataCollection="ToDoItem">
+	<ScrollView id="svItemList">
+		<TableView id="tvItemList" editable="true" dataCollection="ToDoItem" onSwipe="doSwipeTV">
 			<TableViewRow>
 				<Label>{description}</Label>
 			</TableViewRow>			

@@ -1,10 +1,13 @@
 <Alloy>
 	<NavigationWindow id="navwin" platform="ios">
-		<Window title="My Todo List">
+		<Window id="rootwin" title="My Todo List">
+			<LeftNavButton id="leftnav">
+				<Button id="btnEdit" systemButton="EDIT" visible="false" onClick="doClickEdit" />
+			</LeftNavButton>
 			<RightNavButton>
 				<Button systemButton="ADD" onClick="doClickAdd" />
 			</RightNavButton>
-			<Require src="itemlist" />
+			<Require id="reqItemList" src="itemlist" />
 		</Window>
 	</NavigationWindow>
 	<Window id="index" title="My Todo List" platform="android"> <!-- the id is set to give android a reference to the root window -->
