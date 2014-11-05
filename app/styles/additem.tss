@@ -1,4 +1,16 @@
 
-".container" : {
-  
+"Label":{
+	top:"2%",
+	font:{
+		fontSize: 24
+	}	
+},
+"TextField":{
+	top:"2%",
+	font:{
+		fontSize: 24
+	}
+},
+"Picker":{
+	top:"2%"
 }

@@ -1,5 +1,17 @@
 <Alloy>
-	<Window>
-		<Label>This is the add item controller</Label>
+	<Window onOpen="doInit">
+		<RightNavButton platform="ios">
+			<Button systemButton="SAVE" />
+		</RightNavButton>
+		<Menu platform="android">
+			<MenuItem icon="Ti.Android.R.drawable.ic_menu_save" showAsAction="Ti.Android.SHOW_AS_ACTION_ALWAYS" />
+		</Menu>
+		<View id="inputform">
+			<Label>What needs doing?</Label>
+			<TextField id="description" hintText="Describe the task here" />
+			<Label>When should it be done?</Label>
+			<Picker id="duedate" type="Ti.UI.PICKER_TYPE_DATE">
+        	</Picker>
+		</View>
 	</Window>
 </Alloy>
