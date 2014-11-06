@@ -13,5 +13,6 @@
 			<Picker id="duedate" onChange="doChangeDuedate" type="Ti.UI.PICKER_TYPE_DATE">
         	</Picker>
 		</View>
+		
 	</Window>
 </Alloy>

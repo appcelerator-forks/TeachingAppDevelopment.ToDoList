@@ -1,10 +1,16 @@
 <Alloy>
 	<Collection src="ToDoItem" />
 	<ScrollView id="svItemList">
-		<TableView id="tvItemList" editable="true" dataCollection="ToDoItem" onSwipe="doSwipeTV">
-			<TableViewRow>
-				<Label>{description}</Label>
+		<TableView id="tvItemList" editable="true" dataCollection="ToDoItem" onLongclick="doLongClick">
+			<TableViewRow model="{alloy_id}">
+				<Label id="description">{description}</Label>
 			</TableViewRow>			
 		</TableView>
 	</ScrollView>
+	<OptionDialog title="Delete this item?" platform="android" id="odDelete" onClick="doClickOptionDelete">
+		<Options>
+			<Option>Confirm</Option>
+			<Option>Cancel</Option>>
+		</Options>
+	</OptionDialog>
 </Alloy>

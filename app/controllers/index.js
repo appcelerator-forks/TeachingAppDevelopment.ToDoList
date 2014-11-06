@@ -18,11 +18,9 @@ function doClickEdit(e){
 	
 	// add the event listener
 	cancelbutton.addEventListener("click", doClickDone);
-	var emptyView = Ti.UI.createView();
 		
-	emptyView.add(cancelbutton);
 	// add the cancel button to the window
-	$.rootwin.setLeftNavButton(emptyView);
+	$.rootwin.setLeftNavButton(cancelbutton);
 	// set the TableView to editing
 	var itemListView = $.reqItemList.getView('tvItemList');
 	itemListView.editing = true;
@@ -36,11 +34,9 @@ function doClickDone(e){
 	});
 	// add the event listener
 	editbutton.addEventListener("click", doClickEdit);
-	var emptyView = Ti.UI.createView();
-	emptyView.add(editbutton);
 		
 	// add the cancel button to the window
-	$.rootwin.setLeftNavButton(emptyView);
+	$.rootwin.setLeftNavButton(editbutton);
 
 	// set the TableView to not editing
 	var itemListView = $.reqItemList.getView('tvItemList');
