@@ -19,6 +19,10 @@ if(OS_ANDROID){
 }
 
 // Shared methods
+function doChangeDoneStatus(e){
+	Ti.API.info("doChangeDoneStatus");
+}
+
 function deleteModel(modelid){
 	//get the model
 	var model = Alloy.Collections.ToDoItem.get(modelid);

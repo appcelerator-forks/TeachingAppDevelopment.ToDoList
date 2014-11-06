@@ -2,8 +2,9 @@
 	<Collection src="ToDoItem" />
 	<ScrollView id="svItemList">
 		<TableView id="tvItemList" editable="true" dataCollection="ToDoItem" onLongclick="doLongClick">
-			<TableViewRow model="{alloy_id}">
-				<Label id="description">{description}</Label>
+			<TableViewRow width="Ti.UI.FILL" model="{alloy_id}">
+				<Label left="2%" id="description" text="{description}" />
+				<Switch right="2%" id="done" value="{done == 1}" onChange="doChangeDoneStatus" />	
 			</TableViewRow>			
 		</TableView>
 	</ScrollView>
