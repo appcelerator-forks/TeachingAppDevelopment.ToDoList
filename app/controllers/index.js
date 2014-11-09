@@ -8,41 +8,34 @@ function doClickAdd(e){
 	}
 }
 
-
 function doClickEdit(e){
-	// create the cancel button
-	var cancelbutton = Ti.UI.createButton({
-		id: "btnCancel",
-		systemButton: "CANCEL"
+	// create the done button
+	var donebutton = Ti.UI.createButton({
+		systemButton: "DONE"
 	});
-	
 	// add the event listener
-	cancelbutton.addEventListener("click", doClickDone);
-		
+	donebutton.addEventListener("click", doClickDone);
 	// add the cancel button to the window
-	$.rootwin.setLeftNavButton(cancelbutton);
+	$.rootwin.setLeftNavButton(donebutton);
 	// set the TableView to editing
 	var itemListView = $.reqItemList.getView('tvItemList');
 	itemListView.editing = true;
 }
 
 function doClickDone(e){
-	// create the cancel button
+	// create the edit button
 	var editbutton = Ti.UI.createButton({
-		id: "btnEdit",
 		systemButton: "EDIT"
 	});
 	// add the event listener
 	editbutton.addEventListener("click", doClickEdit);
-		
-	// add the cancel button to the window
+	// TODO figure out why this does not work
+	// add the edit button to the window
 	$.rootwin.setLeftNavButton(editbutton);
-
 	// set the TableView to not editing
 	var itemListView = $.reqItemList.getView('tvItemList');
 	itemListView.editing = false;
 }
-
 
 // create global reference to the navwin, for later use
 Alloy.Globals.navwin = $.navwin;
