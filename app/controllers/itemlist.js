@@ -52,6 +52,12 @@ function deleteModel(modelid){
 	// delete the model
 	model.destroy();
 }
+// status="{done}" does not fly with android, so we need to handle the initialization of the switch onPostlayout
+function doSetSwitch(e){
+	e.source.status = (e.source.plhStatus == 1);
+}
+
+
 Alloy.Collections.ToDoItem.fetch();
 // We set the comparator AFTER the fetch
-Alloy.Collections.ToDoItem.comparator = 'duedate';
+//Alloy.Collections.ToDoItem.comparator = 'duedate';
