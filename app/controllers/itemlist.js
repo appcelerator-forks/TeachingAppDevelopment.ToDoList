@@ -57,6 +57,15 @@ function doSetSwitch(e){
 	e.source.status = (e.source.plhStatus == 1);
 }
 
+// Testing formatter
+function myFormatter(model){
+	 // Need to convert the model to a JSON object
+    var transform = model.toJSON();
+    transform.description = "(" + transform.description + ")";
+    // Example of creating a custom attribute, reference in the view using {custom}
+    //transform.custom = transform.title + " by " + transform.author;
+    return transform;
+}
 
 Alloy.Collections.ToDoItem.fetch();
 // We set the comparator AFTER the fetch
