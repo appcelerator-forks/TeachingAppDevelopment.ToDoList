@@ -1,7 +1,12 @@
 "Window": {
 	backgroundColor: "white",
 	layout: "vertical",
-	width: Titanium.UI.FILL
+	width: Titanium.UI.FILL,
+	orientationModes: [
+		Ti.UI.PORTRAIT,
+		Ti.UI.LANDSCAPE_RIGHT,
+		Ti.UI.LANDSCAPE_LEFT
+	]
 	
 },
 "View": {
